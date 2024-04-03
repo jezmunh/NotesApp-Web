@@ -2,7 +2,15 @@
 import NavBar from "../components/NavBar.vue";
 import NoteCard from "../components/NoteCard.vue";
 import { RouterLink } from "vue-router";
+import {onMounted, ref } from "vue";
+import * as api from "../api/api.js";
 
+const notes = ref();
+
+onMounted(async () => {
+    notes.value = await api.GetAllNotes()
+    console.log(notes.value)
+});
 </script>
 
 <template>

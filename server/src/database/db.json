@@ -1,0 +1,16 @@
+{
+    "notes": [
+        {
+            "id": 1,
+            "title": "DB note 1",
+            "content": "The first note from improvised local database",
+            "created_on": "01.01.2000"
+        },
+        {
+            "id": 2,
+            "title": "DB note 2",
+            "content": "The second note from improvised local database",
+            "created_on": "01.01.2000"
+        }
+    ]
+}
