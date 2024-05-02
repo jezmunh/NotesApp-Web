@@ -5,24 +5,65 @@ const getAllNotes = (req, res) => {
     res.send({ status: 'OK', data: allNotes });
 };
 
-const getNote = (req, res) => {
-    const note = noteService.getNote();
-    res.send('Get an existing note');
+const getNote = (req, res) => {    
+    const {
+        params: { noteId },
+    } = req;
+    if (!noteId) {
+        return;
+    }
+    const note = noteService.getNote(noteId);
+    res.send({ status: 'OK', data: note });
 };
 
 const createNote = (req, res) => {
-    const createdNote = noteService.createNote();
-    res.send('Create a new note');
+    const {body} = req;
+    if (!body.title || !body.content) {
+        res.status(400).send({
+            status: 'FAILED',
+            data: {
+                error:
+                    "One of the following keys is missing or is empty in request body: 'title', content'",
+            },
+        });
+        return;
+    }
+    const newNote = {
+        title: body.title,
+        content: body.content,
+    };
+    const createdNote = noteService.createNote(newNote);
+    res.status(201).send({
+        status: 'OK',
+        data: createdNote
+    });
 };
 
 const updateNote = (req, res) => {
-    const updatedNote = noteService.updateNote();
-    res.send('Update an existing note');
+    const {
+        body,
+        params: { noteId },
+    } = req;
+    if (!noteId) {
+        return;
+    }
+    const updatedNote = noteService.updateNote(
+        noteId,
+        body
+    );
+    res.send({ status: 'OK', data: updatedNote });
 };
 
 const deleteNote = (req, res) => {
-    noteServiceService.deleteNote();
-    res.send('Delete an existing note');
+    const {
+        params: { noteId },
+    } = req;
+    if (!noteId) {
+        return;
+    }
+
+    noteService.deleteNote(noteId);
+    res.status(204).send({ status: 'OK' });
 };
 
 module.exports = {

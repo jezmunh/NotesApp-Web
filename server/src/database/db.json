@@ -1,16 +1,18 @@
 {
-    "notes": [
-        {
-            "id": 1,
-            "title": "DB note 1",
-            "content": "The first note from improvised local database",
-            "created_on": "01.01.2000"
-        },
-        {
-            "id": 2,
-            "title": "DB note 2",
-            "content": "The second note from improvised local database",
-            "created_on": "01.01.2000"
-        }
-    ]
+  "notes": [
+    {
+      "title": "Another one 1",
+      "content": "Very amusing content",
+      "id": "1e29bc8a-83f0-4c3b-8250-e8c5ac447c0a",
+      "createdAt": "02.05.2024, 16:32:54",
+      "updatedAt": "02.05.2024, 16:32:54"
+    },
+    {
+      "title": "Another one 2",
+      "content": "Very amusing content (again)",
+      "id": "53275412-d1d7-45d8-9c29-626ba3e439b4",
+      "createdAt": "02.05.2024, 16:33:05",
+      "updatedAt": "02.05.2024, 16:33:05"
+    }
+  ]
 }

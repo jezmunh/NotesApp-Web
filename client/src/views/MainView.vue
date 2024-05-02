@@ -8,8 +8,8 @@ import * as api from "../api/api.js";
 const notes = ref();
 
 onMounted(async () => {
-    notes.value = await api.GetAllNotes()
-    console.log(notes.value)
+    notes.value = await api.GetAllNotes();
+    console.log(notes.value.data);
 });
 </script>
 
@@ -22,7 +22,7 @@ onMounted(async () => {
     </nav>
     <!-- <p class="mx-auto text-xl p-10 text-white text-center">There are no notes currently. It's time to make your first one!</p> -->
     <div class="grid lg:grid-cols-4 md:grid-cols-1 gap-4 p-10">
-      <NoteCard v-for="n in 12"/>      
+      <NoteCard v-for="(item, index) in notes" :note="item.data" :key="index" />    
     </div>
   </div>
   
