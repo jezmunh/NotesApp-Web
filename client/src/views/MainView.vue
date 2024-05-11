@@ -2,15 +2,29 @@
 import NavBar from "../components/NavBar.vue";
 import NoteCard from "../components/NoteCard.vue";
 import { RouterLink } from "vue-router";
-import {onMounted, ref } from "vue";
+import {onMounted, onBeforeMount, ref, isProxy, toRaw } from "vue";
+import axios from 'axios';
 import * as api from "../api/api.js";
 
 const notes = ref();
 
-onMounted(async () => {
-    notes.value = await api.GetAllNotes();
-    console.log(notes.value.data);
+// onMounted(async () => {
+//     notes.value = await api.GetAllNotes();
+//     console.log(notes.value.data);
+// });
+onBeforeMount(async() => {    
+    // notes.value = await api.GetAllNotes();    
+    axios.get('http://localhost:3000/api/v1/notes', {
+    
+    }).then(function (response) {
+      console.log(response.data.data);
+      notes.value = response.data.data;
+    })
+    console.log(notes.value);
 });
+
+
+console.log(JSON.stringify(notes.value));
 </script>
 
 <template>
@@ -22,7 +36,7 @@ onMounted(async () => {
     </nav>
     <!-- <p class="mx-auto text-xl p-10 text-white text-center">There are no notes currently. It's time to make your first one!</p> -->
     <div class="grid lg:grid-cols-4 md:grid-cols-1 gap-4 p-10">
-      <NoteCard v-for="(item, index) in notes" :note="item.data" :key="index" />    
+      <NoteCard v-for="(item, index) in notes" :note="item" :key="index" />    
     </div>
   </div>
   

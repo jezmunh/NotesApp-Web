@@ -1,7 +1,12 @@
 <script setup>
 import NavBar from "../components/NavBar.vue";
 import { RouterLink } from "vue-router";
+import * as api from "../api/api.js";
 
+function newNoteClient () {
+  api.sendNote();
+  
+}
 </script>
 
 <template>
@@ -23,7 +28,7 @@ import { RouterLink } from "vue-router";
         </div>
         <div class="flex items-start mb-5">
         </div>
-        <button type="submit" class="text-white bg-sky-600 hover:bg-sky-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full md:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-slate-800">Create a note</button>
+        <button type="submit" @click="newNoteClient" class="text-white bg-sky-600 hover:bg-sky-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full md:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-slate-800">Create a note</button>
       </form>
   </div>
   
