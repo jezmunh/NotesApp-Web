@@ -15,6 +15,6 @@ defineProps({
 <template>
     <RouterLink to="/" class="block lg:max-w-sm md:max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-slate-800 dark:border-gray-700 dark:hover:bg-slate-700">
         <h5 class="mb-2 font-semibold text-3xl tracking-tight text-gray-900 dark:text-white text-ellipsis overflow-hidden">{{ note.title }}</h5>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Created on: {{ note.createdAt }}</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Created at: {{ note.createdAt }}</p>
     </RouterLink>
 </template>
