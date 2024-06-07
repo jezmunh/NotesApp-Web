@@ -1,5 +1,5 @@
 # Notes App Web
-The pet-project with which you can write and manage your notes. For client-side I used Vue 3 + TailwindCSS.
+The pet-project with which you can write and manage your notes. For client-side I used Vue 3 + TailwindCSS + Axios.
 ## Features
 * Seeying the whole list of the notes
 * New note addition
