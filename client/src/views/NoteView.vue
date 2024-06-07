@@ -38,6 +38,18 @@ function editNoteClient () {
     console.log(error);
   });
   
+  
+}
+function deleteNoteClient () {
+  axios.delete(`http://localhost:3000/api/v1/notes/${route.params.noteID}`, {
+
+  }).then(function (response) {
+    router.push({ name: 'home'});
+  }).catch(function (error) {
+    console.log(error);
+  });
+  
+  
 }
 </script>
 
@@ -60,7 +72,8 @@ function editNoteClient () {
         </div>
         <div class="flex items-start mb-5">
         </div>
-        <button @click="editNoteClient" class="text-white bg-sky-600 hover:bg-sky-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full md:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-slate-800">Create a note</button>
+        <button @click="editNoteClient" class="text-white bg-sky-600 hover:bg-sky-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full md:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-slate-800">Edit a note</button>
+        <button @click="deleteNoteClient" class="text-white bg-red-600 hover:bg-red-900 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full md:w-auto px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-slate-800 mx-4">Delete a note</button>
       </form>
   </div>
   
