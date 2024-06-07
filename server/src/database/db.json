@@ -1,11 +1,11 @@
 {
   "notes": [
     {
-      "title": "Another one 1",
-      "content": "Very amusing content",
+      "title": "One another 1",
+      "content": "Very amusing and interesting content.",
       "id": "1e29bc8a-83f0-4c3b-8250-e8c5ac447c0a",
       "createdAt": "02.05.2024, 16:32:54",
-      "updatedAt": "02.05.2024, 16:32:54"
+      "updatedAt": "07.06.2024, 11:02:59"
     },
     {
       "title": "Newer",
@@ -34,6 +34,34 @@
       "id": "52aafe4e-198a-4119-83ae-36369f83ae2d",
       "createdAt": "11.05.2024, 12:31:24",
       "updatedAt": "11.05.2024, 12:31:24"
+    },
+    {
+      "title": "New note",
+      "content": "Attempt to add new note via client-side",
+      "id": "b624f014-57d3-4a15-bc5b-c9c24a5581c6",
+      "createdAt": "11.05.2024, 13:55:32",
+      "updatedAt": "11.05.2024, 13:55:32"
+    },
+    {
+      "title": "Fdfdfdf",
+      "content": "dfdfdfdf",
+      "id": "65028cae-cbb7-4916-8229-01a226b5ac49",
+      "createdAt": "11.05.2024, 13:59:18",
+      "updatedAt": "11.05.2024, 13:59:18"
+    },
+    {
+      "title": "2132434343000_",
+      "content": "________",
+      "id": "f956c74b-e7ed-4a8d-99f5-3d9c6a4281b9",
+      "createdAt": "07.06.2024, 10:32:14",
+      "updatedAt": "07.06.2024, 10:32:14"
+    },
+    {
+      "title": "2132434343000_",
+      "content": "________",
+      "id": "2357d483-74df-4af5-9ba1-7267831e8f28",
+      "createdAt": "07.06.2024, 10:32:24",
+      "updatedAt": "07.06.2024, 10:32:24"
     }
   ]
 }

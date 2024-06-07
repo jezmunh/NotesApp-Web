@@ -2,9 +2,9 @@
 import NavBar from "../components/NavBar.vue";
 import NoteCard from "../components/NoteCard.vue";
 import { RouterLink } from "vue-router";
-import {onMounted, onBeforeMount, ref, isProxy, toRaw } from "vue";
+import {onMounted, onBeforeMount, ref} from "vue";
 import axios from 'axios';
-import * as api from "../api/api.js";
+
 
 const notes = ref();
 
