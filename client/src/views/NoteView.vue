@@ -57,7 +57,7 @@ function deleteNoteClient () {
   <div class="flex flex-col min-h-screen min-w-screen">
     <NavBar />
     <nav class="flex flex-wrap items-center justify-between mx-auto p-10 w-dvw">
-      <p class="font-semibold text-3xl text-white">Note creation</p>
+      <p class="font-semibold text-3xl text-white">Note editing</p>
       <RouterLink to="/" class="text-sky-500 no-underline hover:underline">< Back to all notes</RouterLink>
     </nav>
 

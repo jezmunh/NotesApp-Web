@@ -19,6 +19,7 @@ onBeforeMount(async() => {
     }).then(function (response) {
       console.log(response.data.data);
       notes.value = response.data.data;
+
     })
     console.log(notes.value);
 });
@@ -34,7 +35,9 @@ console.log(JSON.stringify(notes.value));
       <p class="font-semibold text-3xl text-white">List of the notes</p>
       <RouterLink to="/create" class="text-sky-500 no-underline hover:underline">Add new note</RouterLink>
     </nav>
-    <!-- <p class="mx-auto text-xl p-10 text-white text-center">There are no notes currently. It's time to make your first one!</p> -->
+    <div v-if="notes.length <= 0">
+    <p class="mx-auto text-xl p-10 text-white text-center">No notes yet. It's time to make your first one!</p>
+    </div>
     <div class="grid lg:grid-cols-4 md:grid-cols-1 gap-4 p-10">
       <NoteCard v-for="(item, index) in notes" :note="item" :key="index" />    
     </div>

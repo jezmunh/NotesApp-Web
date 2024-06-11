@@ -1,8 +1,10 @@
 <script setup>
 import NavBar from "../components/NavBar.vue";
-import { RouterLink } from "vue-router";
+import { RouterLink, useRouter} from "vue-router";
 import {ref} from 'vue';
 import axios from 'axios';
+
+const router = useRouter();
 
 let form = ref({
   title: "",
@@ -17,6 +19,7 @@ function newNoteClient () {
     content: form.value.content
   }).then(function (response) {
     console.log(response);
+    router.push({ name: 'home'});
   }).catch(function (error) {
     console.log(error);
   });
