@@ -15,6 +15,7 @@ npm run dev
 * Seeying the whole list of the notes
 * New note addition
 * Note management (Viewing, editing and deleting)
+* Localisation (Russian and English)
 ## Screenshots
 <img src="https://raw.githubusercontent.com/jezmunh/NotesApp-Web/main/screenshots/screenshot2.png" alt="screenshot" /> </br>
 <img src="https://raw.githubusercontent.com/jezmunh/NotesApp-Web/main/screenshots/screenshot3.png" alt="screenshot" />
