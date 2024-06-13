@@ -26,17 +26,21 @@ onBeforeMount(async() => {
 
 
 console.log(JSON.stringify(notes.value));
+
+
+
+
 </script>
 
 <template>
   <div>
     <NavBar />
     <nav class="flex flex-wrap items-center justify-between mx-auto p-10">
-      <p class="font-semibold text-3xl text-white">List of the notes</p>
-      <RouterLink to="/create" class="text-sky-500 no-underline hover:underline">Add new note</RouterLink>
+      <p class="font-semibold text-3xl text-white">{{ $t("home.header")}}</p>
+      <RouterLink to="/create" class="text-sky-500 no-underline hover:underline">{{ $t("home.add_note")}}</RouterLink>
     </nav>
     <div v-if="notes.length <= 0">
-    <p class="mx-auto text-xl p-10 text-white text-center">No notes yet. It's time to make your first one!</p>
+    <p class="mx-auto text-xl p-10 text-white text-center">{{ $t("home.note_absence")}}</p> <!--No notes yet. It's time to make your first one!-->
     </div>
     <div class="grid lg:grid-cols-4 md:grid-cols-1 gap-4 p-10">
       <NoteCard v-for="(item, index) in notes" :note="item" :key="index" />    

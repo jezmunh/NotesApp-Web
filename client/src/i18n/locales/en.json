@@ -1,0 +1,26 @@
+{
+"locale": {
+    "en": "English",
+    "ru": "Русский"
+  },
+
+    "home": {
+      "header": "List of the notes",
+      "add_note": "Add new note",
+      "note_absence": "No notes yet. It's time to make your first one!"
+    },
+    "note_info": {
+      "header": "Note creation",
+      "note_heading": "Heading for note",
+      "note_content": "Your note",
+      "button_add": "Create a note",
+      "back_link": "< Back to all notes",
+      "created_at": "Created at: {date}"
+     
+    },
+    "note_edit": {
+       "header": "Note editing",
+       "edit_button": "Edit note",
+       "delete_button": "Delete note"
+    }
+  }
